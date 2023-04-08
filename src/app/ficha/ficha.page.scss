@@ -1,0 +1,26 @@
+.subtitle{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.description {
+    display: none;
+}
+
+.item {
+    display: flex;
+}
+
+.item:hover .thumb {
+    height: 5rem;
+    width: 5rem;
+    transition: 250ms ease-in-out;
+}
+
+.btnCart {
+    height: 2.5rem;
+    font-size: 0.9rem;
+    --border-radius: 50%;
+}
+
+

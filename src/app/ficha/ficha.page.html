@@ -1,0 +1,135 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">Games</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+          <ion-card>
+              <ion-card-header>
+                    <ion-card-title>top 8 melhores jogos de 2013</ion-card-title>
+                    <ion-card-subtitle>Nostalgia pura!!!!</ion-card-subtitle>
+              </ion-card-header>     
+          </ion-card>
+
+          <ion-list>
+              <ion-item class="item">
+                <ion-thumbnail slot="start" class="thumb">
+                  <img alt="Silhouette of mountains" src="{{games[0].src}}" />
+                </ion-thumbnail>
+                <ion-label class="label">{{games[0].title}}</ion-label>
+                <ion-button slot="end" class="btnCart" (click)="addToCart()">
+                  <p class="addedOrNot">{{games[0].signal}}</p>
+                  <ion-icon name="cart-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+
+              <ion-item class="item">
+                <ion-thumbnail slot="start" class="thumb">
+                  <img alt="Silhouette of mountains" src="{{games[1].src}}" />
+                </ion-thumbnail>
+                <ion-label>{{games[1].title}}</ion-label>
+                <ion-button slot="end" class="btnCart"  (click)="addToCart()">
+                  <p class="addedOrNot">{{games[1].signal}}</p>
+                  <ion-icon name="cart-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+
+              <ion-item class="item">
+                <ion-thumbnail slot="start" class="thumb">
+                  <img alt="Silhouette of mountains" src="{{games[2].src}}" />
+                </ion-thumbnail>
+                <ion-label>{{games[2].title}}</ion-label>
+                <ion-button slot="end" class="btnCart" (click)="addToCart()">
+                  <p class="addedOrNot">{{games[2].signal}}</p> 
+                  <ion-icon name="cart-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+
+              <ion-item class="item">
+                <ion-thumbnail slot="start" class="thumb">
+                  <img alt="Silhouette of mountains" src="{{games[3].src}}" />
+                </ion-thumbnail>
+                <ion-label>{{games[3].title}}</ion-label>
+                <ion-button slot="end" class="btnCart" (click)="addToCart()">
+                  <p class="addedOrNot">{{games[3].signal}}</p>
+                  <ion-icon name="cart-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+
+              <ion-item class="item">
+                <ion-thumbnail slot="start" class="thumb">
+                  <img alt="Silhouette of mountains" src="{{games[4].src}}" />
+                </ion-thumbnail>
+                <ion-label>{{games[4].title}}</ion-label>
+                <ion-button slot="end" class="btnCart" (click)="addToCart()">
+                  <p class="addedOrNot">{{games[4].signal}}</p>
+                  <ion-icon name="cart-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+
+              <ion-item class="item">
+                <ion-thumbnail slot="start" class="thumb">
+                  <img alt="Silhouette of mountains" src="{{games[5].src}}" />
+                </ion-thumbnail>
+                <ion-label>{{games[5].title}}</ion-label>
+                <ion-button slot="end" class="btnCart" (click)="addToCart()">
+                  <p class="addedOrNot">{{games[5].signal}}</p>
+                  <ion-icon name="cart-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+
+              <ion-item class="item">
+                <ion-thumbnail slot="start" class="thumb">
+                  <img alt="Silhouette of mountains" src="{{games[6].src}}" />
+                </ion-thumbnail>
+                <ion-label>{{games[6].title}}</ion-label>
+                <ion-button slot="end" class="btnCart" (click)="addToCart()">
+                  <p class="addedOrNot">{{games[6].signal}}</p>  
+                  <ion-icon name="cart-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+
+              <ion-item class="item">
+                <ion-thumbnail slot="start" class="thumb">
+                  <img alt="Silhouette of mountains" src="{{games[7].src}}" />
+                </ion-thumbnail>
+                <ion-label>{{games[7].title}}</ion-label>
+                <ion-button slot="end" class="btnCart" (click)="addToCart()">
+                  <p class="addedOrNot">{{games[7].signal}}</p>  
+                  <ion-icon name="cart-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+          </ion-list>
+
+          <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+            <ng-template>
+              <ion-header>
+                <ion-toolbar>
+                  <ion-buttons slot="start">
+                    <ion-button (click)="cancel()">Cancel</ion-button>
+                  </ion-buttons>
+                  <ion-title>Carrinho</ion-title>
+                  <ion-buttons slot="end">
+                    <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+                  </ion-buttons>
+                </ion-toolbar>
+              </ion-header>
+              <ion-content class="ion-padding">
+                <ion-item>
+                  <ion-thumbnail> 
+                    <img src="product selected" src={{produto_src}}>
+                  </ion-thumbnail>
+                  <ion-label>{{produto_title}}</ion-label>
+                  <ion-button (click)="remove()"> - </ion-button>
+                  <p>{{quantity}}</p>
+                  <ion-button (click)="add()"> + </ion-button>
+                </ion-item>
+              </ion-content>
+            </ng-template>
+          </ion-modal>
+
+          <ion-button expand="block" color="danger" class="btn" id="open-modal">Comprar</ion-button>
+
+</ion-content>

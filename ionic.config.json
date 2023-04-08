@@ -1,0 +1,7 @@
+{
+  "name": "projeto3DS2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
